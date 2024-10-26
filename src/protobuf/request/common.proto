@@ -1,5 +1,6 @@
+//문법 = proto3이라는 문법을 사용
 syntax = "proto3";
-
+//common이라는 패키지(그룹)에서,
 package common;
 
 // 공통 패킷 구조
@@ -7,5 +8,5 @@ message Packet {
   uint32 handlerId = 1;    
   string userId = 2;        
   string version = 3;  
-  byte[] payload = 4;       
+  bytes payload = 4;       
 }

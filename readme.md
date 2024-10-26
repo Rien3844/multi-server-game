@@ -62,3 +62,41 @@
 
 - [ ]  테스트
 </aside>
+
+## 패킷 구조
+### 1. common
+|필드명|타입|설명|
+|:---:|:---:|:---:|
+|handlerId|unit32|핸들러 ID(4바이트)|
+|userId|string|유저 ID(UUID)|
+|version|string|클라이언트 버전(문자열)|
+|payload|bytes|실제 데이터|
+
+### 2. InitialPayload
+|필드명|타입|
+|:---:|:---:|
+|deviceId|string|
+|playerId|unit32|
+|latency|float|
+
+### 3. LocationUpdatePayload
+|필드명|타입|
+|:---:|:---:|
+|x|float|
+|y|float|
+
+### 4. LocationUpdate
+|필드명|타입|
+|:---:|:---:|
+|id|string|
+|playerId|unit32|
+|x|float|
+|y|float|
+
+### 5. Response
+|필드명|타입|설명|
+|:---:|:---:|:---:|
+|handlerId|unit32|핸들러 ID|
+|responseCode|unit32|응답 코드(성공 : 0, 실패 : 에러 코드)|
+|timestamp|long|메시지 생성 타임스탬프|
+|data|bytes|실제 응답 데이터|

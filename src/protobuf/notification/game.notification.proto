@@ -1,7 +1,10 @@
+// ex - 클라이언트에서 x, y좌표를 일방적으로 보내줄 수 있는 패킷
+// Notification : 공고, 고지, 통보
 syntax = "proto3";
 
 package gameNotification;
 
+//users 리스트가 안에있는 유저에 대한 정보를 업데이트 시켜줄 수 있는 패킷.
 // 위치 정보 메시지 구조
 message LocationUpdate {
   repeated UserLocation users = 1;
