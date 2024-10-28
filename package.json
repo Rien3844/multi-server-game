@@ -2,6 +2,7 @@
   "name": "multi-server-game",
   "version": "1.0.0",
   "main": "src/server.js",
+  "type": "module",
   "scripts": {
     "dev": "nodemon src/server.js"
   },
@@ -15,7 +16,10 @@
   },
   "dependencies": {
     "dotenv": "^16.4.5",
-    "protobufjs": "^7.4.0"
-  },
-  "type": "module"
+    "lodash": "^4.17.21",
+    "long": "^5.2.3",
+    "mysql2": "^3.11.3",
+    "protobufjs": "^7.4.0",
+    "uuid": "^11.0.0"
+  }
 }
