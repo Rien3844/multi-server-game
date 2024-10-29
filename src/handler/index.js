@@ -1,6 +1,7 @@
 // handler를 총관리하는 index
 
 import { HANDLER_IDS } from "../constants/handlerId.js";
+import locationUpdateHandler from "./game/LocationUpdate.handler.js";
 import initialHandler from "./user/initial.handler.js";
 
 
@@ -9,6 +10,10 @@ const handlers = {
     [HANDLER_IDS.INITIAL]: {
         handler: initialHandler,
         protoType: 'initial.InitialPayload',
+    },
+    [HANDLER_IDS.LOCATION_UPDATE]:{
+        handler: locationUpdateHandler,
+        protoType: 'game.LocationUpdatePayload',
     },
 }
 

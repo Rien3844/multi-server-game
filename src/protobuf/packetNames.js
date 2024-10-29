@@ -6,7 +6,7 @@ export const packetNames = {
       InitialPayload: 'initial.InitialPayload',
     },
     game: {
-      LocationUpdatePayload: 'game.LocationUpdatePayload'
+      LocationUpdatePayload: 'game.LocationUpdatePayload',
     },
     response: {
       Response: 'response.Response',

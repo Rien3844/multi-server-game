@@ -26,7 +26,7 @@ export const onData = (socket) => (data) => {
                         //패킷 파서
                         const {handlerId, userId, payload} = packetParser(packet);
                         const handler = getHandlerById(handlerId);
-
+                        
                         handler({ socket, userId, payload });
                     }
                 }
