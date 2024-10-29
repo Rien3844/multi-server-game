@@ -9,7 +9,7 @@ export const createResponse = (handlerId, responseCode, data = null) => {
         handlerId,
         responseCode,
         timestamp: Date.now(),
-        data: data? Buffer.from(JSON.stringify(data)) : null,
+        data: data ? Buffer.from(JSON.stringify(data)) : null,
     };
 
     const buffer = Response.encode(response).finish();

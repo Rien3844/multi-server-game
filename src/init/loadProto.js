@@ -67,5 +67,6 @@ export const loadProtos = async () => {
 
 // protoMesseages를 바깥으로 보내는 함수
 export const getProtoMessages = () => {
+    //console.log('protoMessages:', protoMessages);
     return { ...protoMessages };
 }

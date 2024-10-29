@@ -3,7 +3,7 @@ export const packetNames = {
       Packet: 'common.Packet',
     },
     initial: {
-      InitialPacket: 'initial.InitialPayload',
+      InitialPayload: 'initial.InitialPayload',
     },
     game: {
       LocationUpdatePayload: 'game.LocationUpdatePayload'

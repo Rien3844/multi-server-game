@@ -14,7 +14,7 @@ const initialHandler = ({socket, userId, payload}) => {
 
         });
 
-        socket.write('');
+        socket.write(initialResponse);
     }catch(e){
         console.error(e);
     }
