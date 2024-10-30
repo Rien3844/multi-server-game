@@ -8,9 +8,9 @@ export const addUser = (socket, id, playerId, latency) => {
 }
 
 export const removeUser = (socket) => {        
-    const index = userSessions.users.findIndex((user) => user.socket === socket);
+    const index = userSessions.findIndex((user) => user.socket === socket);
     if (index != -1){
-        return userSessions.users.splice(index, 1)[0];
+        return userSessions.splice(index, 1)[0];
     }
 }
 

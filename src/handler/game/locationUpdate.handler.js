@@ -13,12 +13,11 @@ const locationUpdateHandler = ({socket, userId, payload}) => {
         console.log(gameSession);
         //내위치 업데이트
         const user = gameSession.getUser(userId);
-
         if(!user){
             console.error('user not found');
         }
-
-        user.updatePostion(x, y);
+        
+        user.updatePosition(x, y);
 
         const locationData = gameSession.getAllLocation(userId);
 
