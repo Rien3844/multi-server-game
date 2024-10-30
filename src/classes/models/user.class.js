@@ -1,12 +1,12 @@
 
 class User{
-    constructor(socket, id, playerId, latency){
+    constructor(socket, id, playerId, latency, coords){
         this.id = id;
         this.socket = socket;
         this. playerId = playerId;
         this.latency = latency;
-        this.x = 0;
-        this.y = 0;
+        this.x = coords.x;
+        this.y = coords.y;
         //가장 마지막에 위치, 상태가 업데이트 된 시간을 기록해줌.
         this.lastUpdateTime = Date.now();
     }
