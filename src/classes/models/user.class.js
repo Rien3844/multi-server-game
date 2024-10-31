@@ -1,4 +1,4 @@
-import { createPingPacket } from "../../utils/notification/game.notification";
+import { createPingPacket } from "../../utils/notification/game.notification.js";
 
 class User{
     constructor(socket, id, playerId, latency, coords){
@@ -25,13 +25,14 @@ class User{
 
     ping(){
         const now = Date.now();
-
+        console.log(`[${this.id}] : ping`);
         this.socket.write(createPingPacket(now));
     }
 
-    handlerPong(data){
+    handlePong(data){
         const now = Date.now();
         this.latency = (now - data.timestamp) / 2; // 갈때 5초 올때 15초면 그걸 정확히 계산하는거보다 /2해서 '그럼 편도로 10초겠네?'같이 간단하게 계산하기 위함.
+        console.log(`Received pong from user ${this.id} at ${now} with latency ${this.latency}ms`);
     }
 
     //추측항법적용

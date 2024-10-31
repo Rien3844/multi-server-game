@@ -10,7 +10,7 @@ const locationUpdateHandler = ({socket, userId, payload}) => {
         if(!gameSession){
             console.error('Game session not found');
         }
-        console.log(gameSession);
+        //console.log(gameSession);
         //내위치 업데이트
         const user = gameSession.getUser(userId);
         if(!user){
