@@ -21,5 +21,11 @@ export const getAllUser = () => {
 }
 
 export const getUserBySocket = (socket) =>{
-    return userSessions.find((user) => user.socket === socket);
+    const user = userSessions.find((user) => user.socket === socket);
+    if(!user){
+        console.error('User not found: getUserBySocket');
+        return;
+    }
+    return user;
+
 };
